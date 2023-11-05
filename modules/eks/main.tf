@@ -134,7 +134,7 @@ resource "aws_eks_node_group" "node-1" {
 
 resource "aws_ecr_repository" "gff-container" {
   name = "gff-container"
-  image_tag_mutability = "IMMUTABLE"
+  image_tag_mutability = "MUTABLE"
   image_scanning_configuration {
     scan_on_push = true
   }

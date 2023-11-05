@@ -5,3 +5,5 @@ variable "desired_size" {}
 variable "max_size" {}
 variable "min_size" {}
 variable "vpc_cidr_block" {}
+variable "aws_access_key" {}
+variable "aws_secret_key" {}

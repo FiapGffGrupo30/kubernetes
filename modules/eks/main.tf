@@ -131,3 +131,11 @@ resource "aws_eks_node_group" "node-1" {
     aws_iam_role_policy_attachment.node-AmazonEC2ContainerRegistryReadOnly,
   ]
 }
+
+resource "aws_ecr_repository" "gff-container" {
+  name = "gff-container"
+  image_tag_mutability = "IMMUTABLE"
+  image_scanning_configuration {
+    scan_on_push = true
+  }
+}
